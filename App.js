@@ -1,112 +1,42 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { Component } from "react"
+import { Image, Text, TextInput, View ,StyleSheet } from "react-native"
+import lenovo from "./leptop.png"
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+const App  = () => {
+  return(
+    <View>
+      <Text style = {Style.text}>Hello Wolrd</Text>
+      <View style ={{width:100,height:100,backgroundColor:'blue' ,marginTop:10}}/>
+      <View style={{marginTop:15,width:212,backgroundColor :'#f2f2f2',padding:12,borderRadius:8 }}>
+        <Image source={lenovo}  style = {{width:188,height:107,borderRadius:8,marginTop:12}}/>
+        <Text style={{fontSize:14,fontWeight:'bold',marginTop:12}}>Lenovo ThinkPad</Text>
+        <Text style={{fontWeight:'bold',fontSize:14,color:'#f2994a',marginTop:12}}>Rp 8.000.000</Text>
+        <Text style={{fontSize:12 ,fontWeight:'300',marginTop:12}}>Pekanbaru</Text>
+        <View style={{backgroundColor:'#6fcf97',paddingVertical:6,borderRadius:25}}>
+          <Text style={{fontSize:14,fontWeight:'400',textAlign:'center',color:'white'}}>Beli</Text>
         </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+      </View>
+    </View>
+    )
+}
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+const Style = StyleSheet.create({
+ text:{
+   fontSize:18,
+   fontWeight:'bold',
+   marginTop:10
+ }
 });
+
+
+
+
+class Eclass extends Component{
+  render(){
+    return(
+      <Text>Setiawan</Text>
+    )
+  }
+}
 
 export default App;
