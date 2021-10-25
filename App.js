@@ -1,11 +1,13 @@
 import React, { Component } from "react"
 import { Image, Text, TextInput, View ,StyleSheet, ScrollView } from "react-native"
+import MateriFlexBox from "./materiFlexBox"
 import StyleSimple from "./styleSimple"
 
 const App  = () => {
   return(
      <ScrollView>
-       <StyleSimple/>
+       {/* <StyleSimple/> */}
+       <MateriFlexBox />
      </ScrollView>
     )
 }
