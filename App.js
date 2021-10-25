@@ -1,32 +1,15 @@
 import React, { Component } from "react"
-import { Image, Text, TextInput, View ,StyleSheet } from "react-native"
-import lenovo from "./leptop.png"
+import { Image, Text, TextInput, View ,StyleSheet, ScrollView } from "react-native"
+import StyleSimple from "./styleSimple"
 
 const App  = () => {
   return(
-    <View>
-      <Text style = {Style.text}>Hello Wolrd</Text>
-      <View style ={{width:100,height:100,backgroundColor:'blue' ,marginTop:10}}/>
-      <View style={{marginTop:15,width:212,backgroundColor :'#f2f2f2',padding:12,borderRadius:8 }}>
-        <Image source={lenovo}  style = {{width:188,height:107,borderRadius:8,marginTop:12}}/>
-        <Text style={{fontSize:14,fontWeight:'bold',marginTop:12}}>Lenovo ThinkPad</Text>
-        <Text style={{fontWeight:'bold',fontSize:14,color:'#f2994a',marginTop:12}}>Rp 8.000.000</Text>
-        <Text style={{fontSize:12 ,fontWeight:'300',marginTop:12}}>Pekanbaru</Text>
-        <View style={{backgroundColor:'#6fcf97',paddingVertical:6,borderRadius:25}}>
-          <Text style={{fontSize:14,fontWeight:'400',textAlign:'center',color:'white'}}>Beli</Text>
-        </View>
-      </View>
-    </View>
+     <ScrollView>
+       <StyleSimple/>
+     </ScrollView>
     )
 }
 
-const Style = StyleSheet.create({
- text:{
-   fontSize:18,
-   fontWeight:'bold',
-   marginTop:10
- }
-});
 
 
 
